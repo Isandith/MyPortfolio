@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+
+
+  constructor(private titleservice: Title) {
+
+      this.titleservice.setTitle('John Doe - Home');
+
+   }
 
 }
